@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="670" pageHeight="900" columnWidth="630" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6319eb98-8790-4c2e-a892-7726eaa5c8e1">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     warga_rt04.`NoKK` AS warga_rt04_NoKK,
+     warga_rt04.`NIK` AS warga_rt04_NIK,
+     warga_rt04.`Nama` AS warga_rt04_Nama,
+     warga_rt04.`Jenis_Kelamin` AS warga_rt04_Jenis_Kelamin,
+     warga_rt04.`Umur` AS warga_rt04_Umur,
+     warga_rt04.`Status_Hubungan` AS warga_rt04_Status_Hubungan
+FROM
+     `warga_rt04` warga_rt04]]>
+	</queryString>
+	<field name="warga_rt04_NoKK" class="java.lang.Long"/>
+	<field name="warga_rt04_NIK" class="java.lang.Long"/>
+	<field name="warga_rt04_Nama" class="java.lang.String"/>
+	<field name="warga_rt04_Jenis_Kelamin" class="java.lang.String"/>
+	<field name="warga_rt04_Umur" class="java.lang.String"/>
+	<field name="warga_rt04_Status_Hubungan" class="java.lang.String"/>
+	<variable name="warga_rt04_NoKK_1" class="java.lang.Integer" resetType="Page" calculation="Count">
+		<variableExpression><![CDATA[$F{warga_rt04_NoKK}]]></variableExpression>
+	</variable>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="670" height="92" backcolor="#006699" uuid="9c8ae463-e118-4eac-aff1-15cffe3ed043"/>
+				<staticText>
+					<reportElement x="20" y="20" width="339" height="43" forecolor="#FFFFFF" uuid="8d56e729-425c-4a74-a484-b89a9fcd1b96"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[DATA WARGA RT 04]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="470" y="43" width="180" height="38" forecolor="#FFFFFF" uuid="a4f7bd29-2722-44ba-af69-a8c289a4a9b1"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Laporan Data RT 04
+RW 07]]></text>
+				</staticText>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement x="20" y="79" width="100" height="13" uuid="b32e99d8-8b27-4eb3-a923-38d781993173"/>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="23">
+			<line>
+				<reportElement x="-20" y="20" width="650" height="1" forecolor="#666666" uuid="5ed8d659-f93d-4b07-a40a-1e0e0737e2fd"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="388" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="859ad3b4-bbe3-4c23-a1f4-b107eace2f6e"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Umur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="f946ff61-c4af-4fc9-a70a-44c8202c056e"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NoKK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="184" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="f9d8881a-034c-4603-b2a8-537622b5c640"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="92" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="52b1eab2-b54e-4a7f-9e61-66e4222dda13"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="480" y="0" width="150" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="2e446b1a-121f-4958-9094-49931b3e4dd9"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Status Hubungan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="276" y="0" width="112" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="b5e9f090-0010-4894-b8c5-e2a010fce27e"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jenis Kelamin]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="20" width="630" height="1" uuid="e84bc824-80b0-4a48-bda0-cff24c683f96"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="92" height="20" uuid="3843316b-d7c8-4c70-99b6-244602bb73c5"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{warga_rt04_NoKK}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="92" y="0" width="92" height="20" uuid="927e479a-113a-441f-bcb8-543f0e157966"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{warga_rt04_NIK}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="184" y="0" width="92" height="20" uuid="84441e59-4c9d-4467-b812-c7d16c2d11dd"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{warga_rt04_Nama}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="276" y="0" width="112" height="20" uuid="82ccea0d-be88-406c-bc47-eb19426baae8"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{warga_rt04_Jenis_Kelamin}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="388" y="0" width="92" height="20" uuid="5da54be1-5cbf-49bc-a413-a7c54d47858e"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{warga_rt04_Umur}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="480" y="0" width="150" height="20" uuid="4e962d36-6b79-461b-a77d-6665fb6f4ffe"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{warga_rt04_Status_Hubungan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="590" height="13" backcolor="#E6E6E6" uuid="543abb8e-f6e8-432e-9337-86a4f5ff433c"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="590" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="56962d70-face-485a-8186-1ec19036c984"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="1" width="100" height="16" uuid="3eefaa61-dc37-4a85-a32d-927a8689349a"/>
+				<text><![CDATA[Jumlah Data :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="1" width="100" height="16" uuid="615d14f9-08ea-46f1-8f07-c819bbf3502d"/>
+				<textFieldExpression><![CDATA[$V{warga_rt04_NoKK_1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

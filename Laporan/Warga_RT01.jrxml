@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="670" pageHeight="900" columnWidth="630" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="816cce5b-260b-4e70-ae15-fa27e3be1b0c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     warga_rt01.`NoKK` AS warga_rt01_NoKK,
+     warga_rt01.`NIK` AS warga_rt01_NIK,
+     warga_rt01.`Nama` AS warga_rt01_Nama,
+     warga_rt01.`Jenis_Kelamin` AS warga_rt01_Jenis_Kelamin,
+     warga_rt01.`Umur` AS warga_rt01_Umur,
+     warga_rt01.`Status_Hubungan` AS warga_rt01_Status_Hubungan
+FROM
+     `warga_rt01` warga_rt01]]>
+	</queryString>
+	<field name="warga_rt01_NoKK" class="java.lang.Long"/>
+	<field name="warga_rt01_NIK" class="java.lang.Long"/>
+	<field name="warga_rt01_Nama" class="java.lang.String"/>
+	<field name="warga_rt01_Jenis_Kelamin" class="java.lang.String"/>
+	<field name="warga_rt01_Umur" class="java.lang.String"/>
+	<field name="warga_rt01_Status_Hubungan" class="java.lang.String"/>
+	<variable name="warga_rt01_NoKK_1" class="java.lang.Long" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{warga_rt01_NoKK}]]></variableExpression>
+	</variable>
+	<variable name="warga_rt01_NIK_1" class="java.lang.Integer" resetType="Page" calculation="Count">
+		<variableExpression><![CDATA[$F{warga_rt01_NIK}]]></variableExpression>
+	</variable>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="671" height="92" backcolor="#006699" uuid="0ca585e7-b84b-4cf2-9b16-a00811d16383"/>
+				<staticText>
+					<reportElement x="20" y="20" width="349" height="43" forecolor="#FFFFFF" uuid="ab572c4a-5373-4bec-95a3-55f9cc8986a5"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[DATA WARGA RT 01]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="470" y="43" width="180" height="36" forecolor="#FFFFFF" uuid="a5fdf77e-a056-4f87-875e-b39e15191b4b"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Laporan Data RT 01
+RW07
+]]></text>
+				</staticText>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement x="20" y="79" width="100" height="13" uuid="db9b4230-fb82-4bee-9a3d-227ede932760"/>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="24">
+			<line>
+				<reportElement x="-20" y="20" width="650" height="1" forecolor="#666666" uuid="f291f7d3-fc58-4d6e-9131-1f1db2cd5c94"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="6d6802b7-d7e2-420a-b061-8551441da254"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NoKK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="92" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="7e0718d8-3587-470d-ae1a-5a8807589085"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="184" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="d3c528e4-ca9f-411f-bbce-e4aac8475345"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="276" y="0" width="112" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="2b0894e2-dbc8-446c-b6c3-d563751a099f"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jenis Kelamin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="388" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="c1d11e4f-2566-4667-9246-516dad09e7a1"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Umur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="480" y="0" width="150" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="0b7de57c-e365-4eb7-8e32-cf7f0b143087"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Status Hubungan]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="92" height="20" uuid="095222a1-8fb7-49d6-bde9-f3f35915e872"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{warga_rt01_NoKK}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="92" y="0" width="92" height="20" uuid="5440becd-e8ec-4489-933d-4db6cab5b32b"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{warga_rt01_NIK}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="184" y="0" width="92" height="20" uuid="c92b6ac6-2a7f-4292-97ac-a71151118210"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{warga_rt01_Nama}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="276" y="0" width="92" height="20" uuid="00162fe3-09fe-46a9-b940-e61645564cbc"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{warga_rt01_Jenis_Kelamin}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="388" y="0" width="92" height="20" uuid="8bbc5d2a-5334-4807-9865-371a13390bdf"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{warga_rt01_Umur}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="480" y="0" width="150" height="20" uuid="d25ccdb1-d8ab-4478-9417-ec31545a92fe"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{warga_rt01_Status_Hubungan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="23">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="590" height="13" backcolor="#E6E6E6" uuid="2671191f-7bdc-4088-9e24-23915c264514"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="590" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="dfee3321-a5c6-49ca-b606-ca3c57e5405a"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="4" width="100" height="16" uuid="425a86df-0cc4-47b3-a14c-c0273d9d56d6"/>
+				<textFieldExpression><![CDATA[$V{warga_rt01_NIK_1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="4" width="100" height="16" uuid="34e7476f-a96a-4900-b544-ad5b0f564cb2"/>
+				<text><![CDATA[Jumlah Data :]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

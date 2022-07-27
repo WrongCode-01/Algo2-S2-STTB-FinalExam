@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fdc5f240-c297-48d1-845c-80e4a0a632b2">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     keluarga_rt02.`NoKK` AS keluarga_rt02_NoKK,
+     keluarga_rt02.`Kepala_Keluarga` AS keluarga_rt02_Kepala_Keluarga
+FROM
+     `keluarga_rt02` keluarga_rt02]]>
+	</queryString>
+	<field name="keluarga_rt02_NoKK" class="java.lang.Long"/>
+	<field name="keluarga_rt02_Kepala_Keluarga" class="java.lang.String"/>
+	<variable name="keluarga_rt02_NoKK_1" class="java.lang.Integer" resetType="Page" calculation="Count">
+		<variableExpression><![CDATA[$F{keluarga_rt02_NoKK}]]></variableExpression>
+	</variable>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="628c371b-debf-4db6-96d3-3bc2d4c5e197"/>
+				<staticText>
+					<reportElement x="20" y="20" width="267" height="43" forecolor="#FFFFFF" uuid="20f93654-b11c-478a-b3ea-71983559babc"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[DATA KK RT 02]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="394" y="38" width="180" height="36" forecolor="#FFFFFF" uuid="4ac2e7ad-8eac-41ec-abdf-66ba56d36052"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Laporan Data RT 02
+RW 07]]></text>
+				</staticText>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement x="20" y="79" width="100" height="13" uuid="1d24ed61-6d96-4a8e-8a7c-b1e7e02fbd46"/>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="7943e5b5-5d9b-46e3-abf3-ec467b43f93a"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="277" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="d66903c2-f475-44df-bbd2-7ad2caf8b569"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NoKK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="277" y="0" width="277" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="85fc077b-45a9-48c4-906d-75b8e35c2d74"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kepala Keluarga]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="bbde05d4-7ee5-4494-b80a-8fe7fd01008b"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="277" height="20" uuid="7ab33918-4a8b-4b39-a592-dac752226ab1"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{keluarga_rt02_NoKK}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="277" y="0" width="277" height="20" uuid="3343efa5-d407-469e-8922-0b04d46b6c93"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{keluarga_rt02_Kepala_Keluarga}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="8153798b-3ae6-46f1-ae9d-79cfcbb4a6b5"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="017daf4f-830e-4f07-b27f-4948b47a82e7"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="4" width="100" height="13" uuid="ea573eb4-b2fd-4401-85ca-6b7db69b3bd8"/>
+				<text><![CDATA[Jumlah Data :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="4" width="100" height="13" uuid="a38b612b-5171-4817-ac3d-5752da1bcf5b"/>
+				<textFieldExpression><![CDATA[$V{keluarga_rt02_NoKK_1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

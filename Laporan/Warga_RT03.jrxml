@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="670" pageHeight="900" columnWidth="630" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5114e100-2ebf-4577-81cd-ce02826841ab">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     warga_rt03.`NoKK` AS warga_rt03_NoKK,
+     warga_rt03.`NIK` AS warga_rt03_NIK,
+     warga_rt03.`Nama` AS warga_rt03_Nama,
+     warga_rt03.`Jenis_Kelamin` AS warga_rt03_Jenis_Kelamin,
+     warga_rt03.`Umur` AS warga_rt03_Umur,
+     warga_rt03.`Status_Hubungan` AS warga_rt03_Status_Hubungan
+FROM
+     `warga_rt03` warga_rt03]]>
+	</queryString>
+	<field name="warga_rt03_NoKK" class="java.lang.Long"/>
+	<field name="warga_rt03_NIK" class="java.lang.Long"/>
+	<field name="warga_rt03_Nama" class="java.lang.String"/>
+	<field name="warga_rt03_Jenis_Kelamin" class="java.lang.String"/>
+	<field name="warga_rt03_Umur" class="java.lang.String"/>
+	<field name="warga_rt03_Status_Hubungan" class="java.lang.String"/>
+	<variable name="warga_rt03_NoKK_1" class="java.lang.Integer" resetType="Page" calculation="Count">
+		<variableExpression><![CDATA[$F{warga_rt03_NoKK}]]></variableExpression>
+	</variable>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="672" height="92" backcolor="#006699" uuid="3a5ba677-a636-4d1e-80d2-8994a6144061"/>
+				<staticText>
+					<reportElement x="20" y="20" width="346" height="43" forecolor="#FFFFFF" uuid="79f6544c-555f-426f-ad15-d181403817e2"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[DATA WARGA RT 03]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="470" y="43" width="180" height="39" forecolor="#FFFFFF" uuid="759fea5c-b7a0-455a-97d1-7cc37634baf9"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Laporan Data RT 03
+RW07]]></text>
+				</staticText>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement x="20" y="79" width="100" height="13" uuid="4cbd3b75-1e9e-47df-aa7d-426c89f2655c"/>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25">
+			<line>
+				<reportElement x="-20" y="20" width="650" height="1" forecolor="#666666" uuid="36f920a8-b9d2-4c74-b06d-f38413484e54"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="276" y="0" width="112" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="2661e36a-b05e-4979-b90b-21badf2b976b"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jenis Kelamin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="92" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="53b86b1f-603c-4f64-96eb-23f57636c34d"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="388" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="a17dd6be-d777-49ac-b591-8329010f5c87"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Umur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="480" y="0" width="150" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="6f8a41ca-d1a0-4baf-9b8d-9c13a98e91e1"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Status Hubungan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="184" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="0ff2bab0-ab43-4181-8223-441a3f6d1e67"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="9890c3c9-8939-4419-a2a1-4f0d706b4e72"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NoKK]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="630" height="1" uuid="6363cf3a-373c-4417-8fc9-4afd4624118f"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="92" height="20" uuid="795e2688-5493-43bf-ad3b-0ee086149dbc"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{warga_rt03_NoKK}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="92" y="0" width="92" height="20" uuid="7c1227b4-3bd3-4631-a400-4ef05a2b1e17"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{warga_rt03_NIK}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="184" y="0" width="92" height="20" uuid="f5ed28c0-05d4-46c7-89ce-c83a8f5c32c7"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{warga_rt03_Nama}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="276" y="0" width="112" height="20" uuid="4539e819-be2a-47fb-9be9-3e8a984420df"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{warga_rt03_Jenis_Kelamin}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="480" y="1" width="150" height="20" uuid="f7d9acc6-a425-4087-b7cc-9edb476799b2"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{warga_rt03_Status_Hubungan}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="388" y="0" width="92" height="20" uuid="ca854390-0f0a-457a-a84a-d59ecb47851b"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{warga_rt03_Umur}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="590" height="13" backcolor="#E6E6E6" uuid="ee4b7dad-7c12-4d74-8141-c489cb73f8a1"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="590" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="47d6c7ad-2ac1-42f8-b81c-0476b452f8c2"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="4" width="100" height="13" uuid="d4020b33-06c8-405e-90cf-f36e5e751efa"/>
+				<text><![CDATA[Jumlah Data :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="4" width="100" height="13" uuid="8186c4ee-f668-4862-a6df-e0a1d690c1e5"/>
+				<textFieldExpression><![CDATA[$V{warga_rt03_NoKK_1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
