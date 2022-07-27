@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="850" pageHeight="842" columnWidth="810" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9a82020b-3681-4ce6-b7dd-38d0f4b305b0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     bantuan_rt04.`Kode` AS bantuan_rt04_Kode,
+     bantuan_rt04.`Tanggal` AS bantuan_rt04_Tanggal,
+     bantuan_rt04.`NoKK` AS bantuan_rt04_NoKK,
+     bantuan_rt04.`NIK` AS bantuan_rt04_NIK,
+     bantuan_rt04.`Nama` AS bantuan_rt04_Nama,
+     bantuan_rt04.`Bantuan` AS bantuan_rt04_Bantuan,
+     bantuan_rt04.`Keterangan` AS bantuan_rt04_Keterangan
+FROM
+     `bantuan_rt04` bantuan_rt04]]>
+	</queryString>
+	<field name="bantuan_rt04_Kode" class="java.lang.String"/>
+	<field name="bantuan_rt04_Tanggal" class="java.sql.Date"/>
+	<field name="bantuan_rt04_NoKK" class="java.lang.Long"/>
+	<field name="bantuan_rt04_NIK" class="java.lang.Long"/>
+	<field name="bantuan_rt04_Nama" class="java.lang.String"/>
+	<field name="bantuan_rt04_Bantuan" class="java.lang.String"/>
+	<field name="bantuan_rt04_Keterangan" class="java.lang.String"/>
+	<variable name="bantuan_rt04_Kode_1" class="java.lang.Integer" resetType="Page" calculation="Count">
+		<variableExpression><![CDATA[$F{bantuan_rt04_Kode}]]></variableExpression>
+	</variable>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="850" height="92" backcolor="#006699" uuid="96cf0190-3122-457c-9920-fe42889be49f"/>
+				<staticText>
+					<reportElement x="20" y="20" width="383" height="43" forecolor="#FFFFFF" uuid="6d6ae6ed-e4fc-4095-9596-7f09676d9867"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[DATA BANTUAN RT 04]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="650" y="43" width="180" height="36" forecolor="#FFFFFF" uuid="7e266033-ae6c-4957-a311-fad15d9c3f7b"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Laporan Data RT 04
+RW 07]]></text>
+				</staticText>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement x="20" y="79" width="100" height="13" uuid="a18bc499-04ba-4d87-b770-9111209d4ce5"/>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="22">
+			<line>
+				<reportElement x="-20" y="20" width="830" height="1" forecolor="#666666" uuid="79de82a5-424e-469e-b8ba-c56a8986a811"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="a00faf55-5c65-40e1-83e0-7ff581525262"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="300" y="0" width="141" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="4e16f4e9-7a84-4e36-a78d-bcab05eace53"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="158" y="0" width="142" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="af134df9-6113-4b39-b59e-3b329ec61cc4"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NoKK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="79" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="d7e82f24-1b6a-4d61-9162-f5e5f60f74db"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="441" y="0" width="132" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="4e72970f-cc93-4806-a6fc-4c55a0309419"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="680" y="1" width="130" height="19" forecolor="#006699" backcolor="#E6E6E6" uuid="937d4cbe-47d4-4e14-b111-efac01a9e8cd"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Keterangan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="573" y="1" width="107" height="19" forecolor="#006699" backcolor="#E6E6E6" uuid="e7d776a8-9c69-4b4b-9c16-d79c2a45aaa5"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bantuan]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="810" height="1" uuid="cc40390a-211b-47ff-ae74-98312b13daed"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="79" height="20" uuid="f6dfb639-9ca9-45b7-a61b-7697c72b714c"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bantuan_rt04_Kode}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="79" y="0" width="79" height="20" uuid="3feaf214-5184-480f-9d37-e4e6eb8620a0"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bantuan_rt04_Tanggal}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="158" y="0" width="142" height="20" uuid="1e153fd3-e21a-4667-a30a-bdae2e3c0eab"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bantuan_rt04_NoKK}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="573" y="0" width="107" height="20" uuid="4c8ebc09-6b90-4582-8d9d-359d52d5d98a"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bantuan_rt04_Bantuan}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="680" y="0" width="130" height="20" uuid="9933faff-4565-403f-a788-fb0cc6f54515"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bantuan_rt04_Keterangan}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="441" y="0" width="132" height="20" uuid="9995966e-bf47-4e0e-ba70-91d55fdcf76b"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bantuan_rt04_Nama}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="300" y="0" width="141" height="20" uuid="117a4bab-f0d5-4b65-ac43-9c3e59c40a11"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bantuan_rt04_NIK}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="770" height="13" backcolor="#E6E6E6" uuid="a23cd148-f89c-480b-b813-d5a2336b3179"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="770" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="6253c930-4aea-461b-bc7d-21ce147cb967"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="4" width="100" height="13" uuid="104d1a48-ccdc-4054-9aee-c0eae487a7bb"/>
+				<text><![CDATA[Jumlah Data :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="4" width="100" height="13" uuid="6071b9ba-0b56-4d5b-87a0-8e05d8d85690"/>
+				<textFieldExpression><![CDATA[$V{bantuan_rt04_Kode_1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
